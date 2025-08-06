@@ -6,10 +6,7 @@ abstract class Languages {
   }
 
   String get appName;
-
   String get welcomeText;
-
   String get appDescription;
-
   String get selectLanguage;
 }

@@ -18,12 +18,10 @@ Future<Locale> getLocale() async {
 }
 
 Locale _locale(String languageCode) {
-  return languageCode.isNotEmpty
-      ? Locale(languageCode, '')
-      : const Locale('en', '');
+  return languageCode.isNotEmpty ? Locale(languageCode, '') : const Locale('en', '');
 }
 
 void changeLanguage(BuildContext context, String selectedLanguageCode) async {
   var locale = await setLocale(selectedLanguageCode);
-  MyApp.setLocale(context, locale);
+  MyApp.setLocale(context, locale); // ignore: use_build_context_synchronously
 }
